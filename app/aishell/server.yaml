@@ -2,14 +2,15 @@
 # Run download-tedlium-nnet2.sh in 'test/models' to download them.
 use-nnet2: True
 decoder:
+    nnet-mode: 3
     # All the properties nested here correspond to the kaldinnet2onlinedecoder GStreamer plugin properties.
     # Use gst-inspect-1.0 ./libgstkaldionline2.so kaldinnet2onlinedecoder to discover the available properties
     use-threaded-decoder:  true
-    model : /home/hain/workspace/stt/aishell-1/model/final.mdl
-    word-syms : /home/hain/workspace/stt/aishell-1/graph/words.txt
-    fst : /home/hain/workspace/stt/aishell-1/graph/HCLG.fst
-    mfcc-config : test/models/english/tedlium_nnet_ms_sp_online/conf/mfcc.conf
-    ivector-extraction-config : test/models/english/tedlium_nnet_ms_sp_online/conf/ivector_extractor.conf
+    model : ../test/aishell-1/model/final.mdl
+    word-syms : ../test/aishell-1/graph/words.txt
+    fst : ../test/aishell-1/graph/HCLG.fst
+    mfcc-config : ../test/aishell-1/extractor/mfcc_hires.conf
+    ivector-extraction-config : ../test/aishell-1/extractor/ivector_extractor.conf
     max-active: 10000
     beam: 10.0
     lattice-beam: 6.0
@@ -25,7 +26,7 @@ decoder:
     #phone-syms: test/models/english/tedlium_nnet_ms_sp_online/phones.txt
     #word-boundary-file: test/models/english/tedlium_nnet_ms_sp_online/word_boundary.int
     #do-phone-alignment: true
-out-dir: tmp
+out-dir: ../tmp
 
 use-vad: False
 silence-timeout: 10
