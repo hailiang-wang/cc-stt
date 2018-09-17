@@ -1,0 +1,9 @@
+#! /bin/bash 
+###########################################
+#
+###########################################
+
+# constants
+export KALDI_HOME=/home/hain/workspace/stt/kaldi
+export GST_PLUGIN_PATH=$KALDI_HOME/src/gst-plugin
+
