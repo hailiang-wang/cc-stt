@@ -10,6 +10,8 @@ decoder:
     word-syms : ../test/aishell-1/graph/words.txt
     fst : ../test/aishell-1/graph/HCLG.fst
     mfcc-config : ../test/aishell-1/extractor/mfcc_hires.conf
+    add-pitch: True
+    online-pitch-config: ../test/aishell-1/extractor/pitch.conf
     ivector-extraction-config : ../test/aishell-1/extractor/ivector_extractor.conf
     max-active: 10000
     beam: 10.0

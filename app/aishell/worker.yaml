@@ -6,6 +6,8 @@ decoder:
    word-syms: ../test/aishell-1/graph/words.txt
    fst: ../test/aishell-1/graph/HCLG.fst
    silence-phones: "1:2:3:4:5"
+   add-pitch: True
+   online-pitch-config: ../test/aishell-1/extractor/pitch.conf
 out-dir: tmp
 
 use-vad: False
